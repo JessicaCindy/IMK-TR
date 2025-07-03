@@ -87,17 +87,16 @@ section {
   max-height: 557.67px;
 }
 
-.signature-items img {
-  max-width: 350px;
-  max-height: 315px;
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-top: 28px;
-  width: 355px;
-  height: 315px;
-  border-radius: 50px;
+.item img{
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 90%;
+  margin-top: 8%;
 }
-
 
 
 .item p{
@@ -157,6 +156,8 @@ section {
 .border1{
   padding-right: 107px;
   border-right: 2px solid #ccc;
+  height: 300px;
+  align-content: center;
 }
 
 
@@ -164,6 +165,7 @@ section {
   font-family: inter;
   font-size: 64px;
   font-weight: bold;
+
 }
 
 .stars {
@@ -225,10 +227,12 @@ textarea {
 }
 
 .user-review img {
-  width: 204px;
-  height: 181px;
-  border-radius: 10px;
-  float: right;
+  width: 180px;
+  height: 160px;
+  border-radius: 15px;
+  object-fit: cover;
+  align-self: center;
+  margin-right: 60px;
 }
 
 /* Other Reviews */
@@ -239,20 +243,31 @@ textarea {
   font-family: inter'Inter', sans-serif;
 }
 
+.review-card img {
+   width: 180px;
+  height: 160px;
+  border-radius: 15px;
+  object-fit: cover;
+  align-self: center;
+  margin-right: 60px;
+}
+
+
 .review-card {
   background-color: #FFFBE9;
   border-radius: 0px;
   padding: 15px;
   margin-bottom: 20px;
   display: flex;
-  align-content: space-between;
-  gap: 500px;
-  width: 100%;
+  justify-content: space-between; /* memastikan konten kanan & kiri sejajar */
+  align-items: center; /* menyelaraskan vertikal */
+  gap: 40px;
   max-width: 1244px;
-  height: fit-content;
-  font-family: sans-seri'Inter', sans-seriff;
+  height: auto;
+  font-family: inter;
   font-size: 24px;
   border-bottom: 2px solid #ccc;
+
 }
 
 .isi{
@@ -268,6 +283,12 @@ textarea {
   object-fit: cover;
 }
 
+.user-review img {
+  width: 204px;
+  height: 181px;
+  border-radius: 10px;
+  float: right;
+}
 .rating {
   display: flex;
   flex-direction: column;
