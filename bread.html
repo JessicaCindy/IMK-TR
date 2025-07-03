@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Bread - Bakery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #FFFBE9;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding-top: 100px;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: #ad8b73;
+      height: 100px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      height: 100px;
+      object-fit: cover;
+      margin-top: 25px;
+      margin-left: 5px;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 20px;
+      font-weight: 400;
+      color: #ffffff !important;
+      margin: 0 25px;
+      margin-top: 65px;
+    }
+
+    .navbar-nav .nav-link.menu {
+      font-weight: 700;
+      color: #5c3928 !important;
+    }
+
+    .icon-buttons svg + svg {
+      margin-left: 40px;
+    }
+
+    @media (max-width: 992px) {
+      .navbar-custom {
+        height: auto;
+        padding: 20px 0;
+      }
+
+      body {
+        padding-top: 200px;
+      }
+    }
+
+    /* Menu Section */
+    .menu-section {
+      background-color: #fff8e8;
+      padding: 40px 20px;
+    }
+
+    .category-btn {
+      background-color: #5b2e1b;
+      color: white;
+      border: none;
+      margin: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      width: 23%;
+    }
+
+    .category-btn:hover {
+      background-color: #AD8B73;
+    }
+
+    .menupage {
+      width: 100%;
+      padding-left: 1%;
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      width: 90%;
+      margin-top: 8%;
+    }
+
+    .card {
+      background-color: #ffe4c7;
+      border: none;
+      border-radius: 15px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .card-body {
+      margin-right: 50%;
+    }
+
+    .star-rating {
+      color: gold;
+      font-size: 1.1rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      margin-bottom: 0;
+    }
+
+    .bread-btn {
+      background-color: #AD8B73; 
+    }
+
+    .bread-btn:hover {
+      background-color: #8f6d53; 
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ad8b73;
+      padding: 60px 30px;
+      font-size: 18px;
+      line-height: 1.8;
+      isolation: isolate;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .logo {
+      flex: 1 1 240px;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      width: 240px;
+      height: auto;
+      display: block;
+    }
+
+    .footer-sections {
+      display: flex;
+      flex: 3;
+      justify-content: space-between;
+      flex-wrap: nowrap; 
+      align-items: flex-start;
+      gap: 60px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section p {
+      color: white;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+
+    .footer-section p:first-of-type {
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: 4px;
+      background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      .logo img {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .footer-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .footer-section.follow {
+        text-align: center;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link menu" href="menucake.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+        </ul>
+        <div class="icon-buttons d-flex align-items-center">
+          <a href="cart.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <g fill="none" stroke="#000" stroke-width="1.5">
+              <path d="M3.864 16.455c-.858-3.432-1.287-5.147-.386-6.301S6.148 9 9.685 9h4.63c3.538 0 5.306 0 6.207 1.154s.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91Z" />
+              <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
+              <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v4m8-4v4m-4-4v4" />
+            </g>
+          </svg>
+        </a>
+          <!-- User Icon -->
+          <svg class="ms-4"xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 4c1.93 0 3.5 1.57 
+            3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m0 14c-2.03 0-4.43-.82-6.14-2.88a9.95 9.95 0 0 1 12.28 0C16.43 19.18 14.03 20 12 20"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+      <h4 class="fw-bold mb-4" style="color: #5C3928; font-size: 35px;" >Our Menu</h4>
+
+      <div class="catbtn row align-items-center">
+        <div class="mb-4">
+          <a href="menucake.html"><button class="category-btn col-2 mx-2 py-3">Cake</button></a>
+          <a href="cupcake.html"><button class="category-btn col-2 mx-2 py-3">Cupcake</button></a>
+          <a href="slice cake.html"><button class="category-btn col-2 mx-2 py-3">Slice Cake</button></a>
+          <a href="bread.html"><button class="category-btn bread-btn col-2 mx-2 py-3">Bread</button></a>
+        </div>
+      </div>
+
+      <div class="menupage row row-cols-1 row-cols-md-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card">
+            <img src="garlic bread.jpg" class="card-img-top" alt="Garden Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+
+            <div class="card-body pe-5">
+              <p class="card-title">Korean Bread</p>
+              <p class="card-text fw-bold">Rp 45.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card">
+            <img src="korean bread.jpg" class="card-img-top" alt="Garden Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+
+            <div class="card-body pe-5">
+              <p class="card-title">Korean Bread</p>
+              <p class="card-text fw-bold">Rp 45.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card">
+            <img src="cinnamont bread.jpg" class="card-img-top" alt="Coquette Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+
+            <div class="card-body">
+              <p class="card-title">Cinnamon Bread</p>
+              <p class="card-text fw-bold">Rp 45.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card">
+            <img src="croissant.jpg" class="card-img-top" alt="Blue Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+            <div class="card-body pe-5">
+              <p class="card-title">Croissant</p>
+              <p class="card-text fw-bold">Rp 25.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card">
+            <img src="sourdough.jpg" class="card-img-top" alt="Pink Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+            <div class="card-body pe-5">
+              <p class="card-title">Sourdough</p>
+              <p class="card-text fw-bold">Rp 99.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card">
+            <img src="baguette.jpg" class="card-img-top" alt="White Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+            <div class="card-body pe-5">
+              <p class="card-title">Baguette</p>
+              <p class="card-text fw-bold">Rp 75.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col">
+          <div class="card">
+            <img src="mantou.jpg" class="card-img-top" alt="Kurdele Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+            <div class="card-body pe-5">
+              <p class="card-title">Mantou</p>
+              <p class="card-text fw-bold">Rp 25.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col">
+          <div class="card">
+            <img src="gym bread.jpg" class="card-img-top" alt="Heart Blue Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+            <div class="card-body pe-5">
+              <p class="card-title">Gym Bread</p>
+              <p class="card-text fw-bold">Rp 59.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="col">
+          <div class="card">
+            <img src="bear bread.jpg" class="card-img-top" alt="Flower Cake">
+                            <div class="position-absolute" style="top: 84%; right: 20px; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/>
+      </svg>
+    </div>
+            <div class="card-body pe-5">
+              <p class="card-title">Bear Bread</p>
+              <p class="card-text fw-bold">Rp 45.000,00</p>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="logo">
+        <img src="logo rev.png" alt="Lavela Logo" />
+      </div>
+      <div class="footer-sections">
+        <div class="footer-section">
+          <p>About</p>
+          <p>About Us</p>
+          <p>Location</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="footer-section">
+          <p>Support</p>
+          <p>Privacy Policy</p>
+          <p>Terms</p>
+        </div>
+        <div class="footer-section follow">
+          <p>Follow Us</p>
+          <div class="footer-icons">
+            <img src="fb2.png" alt="Facebook" class="social-icon" />
+            <img src="ig2.png" alt="Instagram" class="social-icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

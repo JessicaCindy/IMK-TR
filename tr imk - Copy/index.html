@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Lavela Menu</title>
+  <link rel="stylesheet" href="style.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="gambar/logo.png" alt="Logo" />
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu + Icons -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Menu -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link menu" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+        <!-- Ikon Cart & Akun -->
+        <div class="icon-buttons d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.864 16.455c-.858-3.432-1.287-5.147-.386-6.301S6.148 9 9.685 9h4.63c3.538 0 5.306 0 6.207 1.154s.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91Z" />
+              <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
+              <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v4m8-4v4m-4-4v4" />
+            </g>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 4c1.93 0 3.5 1.57 
+            3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m0 14c-2.03 0-4.43-.82-6.14-2.88a9.95 9.95 0 0 1 12.28 0C16.43 19.18 14.03 20 12 20"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Banner -->
+    <div class="Banner">
+  <div id="gambarCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="gambar/toko.jpg" class="d-block w-100" alt="Toko LAVELA">
+      </div>
+      <div class="carousel-item">
+        <img src="gambar/cake display.jpg" class="d-block w-100" alt="Display Kue">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navigasi panah -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#gambarCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#gambarCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+    <!-- Indikator bawah -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#gambarCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#gambarCarousel" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+</div>
+    <!-- Our Signature -->
+    <section class="signature">
+        <h2>Our Signature</h2>
+        <div class="signature-items">
+            <div class="item">
+                <img src="gambar/garden cake.jpg" alt="Garden Cake">
+                <p><strong>Garden Cake<br>Rp 27.000</strong></p>
+            </div>
+            <div class="item">
+                <img src="gambar/blueberry cheese.jpg" alt="Blueberry Cheesecake">
+                <p><strong>Blueberry Cheesecake<br>Rp 45.000</strong></p>
+            </div>
+            <div class="item">
+                <img src="gambar/cinnamont bread.jpg" alt="cinnamon Bread">
+                <p><strong>cinnamon Bread<br>Rp 16.000</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Menu -->
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+        <img src="gambar/cake.jpg" alt="Cake">
+        <div class="overlay">CAKE</div>
+        </div>
+        <div class="menu-item">
+        <img src="gambar/cupcake.jpg" alt="Cupcake">
+        <div class="overlay">CUPCAKE</div>
+        </div>
+        <div class="menu-item">
+        <img src="gambar/slice cake.jpg" alt="Slice Cake">
+        <div class="overlay">SLICE CAKE</div>
+        </div>
+        <div class="menu-item">
+        <img src="gambar/bread.jpg" alt="Bread">
+        <div class="overlay">BREAD</div>
+        </div>
+    </section>
+ <footer>
+    <div class="footer-container">
+
+      <div class="logo2">
+        <img src="gambar/logo.png" alt="Lavela Logo" />
+      </div>
+
+      <div class="footer-sections">
+
+        <div class="footer-section">
+          <p>About</p>
+          <p>About Us</p>
+          <p>Location</p>
+          <p>Contact Us</p>
+        </div>
+
+        <div class="footer-section">
+          <p>Support</p>
+          <p>Privacy Policy</p>
+          <p>Terms</p>
+        </div>
+
+        <div class="footer-section follow">
+          <p>Follow Us</p>
+          <div class="footer-icons">
+            <img src="gambar/logo facebook 2.png" alt="Facebook" class="social-icon" />
+            <img src="gambar/logo instagram 2.png" alt="Instagram" class="social-icon" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
