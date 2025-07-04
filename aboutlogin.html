@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Lavela</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #fffaf4;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding-top: 180px; /* untuk ngasih jarak di bawah navbar */
+    }
+
+    .navbar-custom {
+      background-color: #ad8b73;
+      height: 100px;
+      display: flex;
+      align-items: center; /* tengah vertikal */
+    }
+
+    .navbar-brand img {
+      height: 100px;
+      object-fit: cover;
+      margin-top: 25px;
+      margin-left: 5px;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 20px;
+      font-weight: 400;
+      color: #ffffff !important;
+      margin: 0 25px;
+      margin-top: 65px; /* geser tulisan ke bawah */
+    }
+
+    .navbar-nav .nav-link.menu {
+      font-weight: 400;
+      color: #ffffff !important;
+    }
+
+    .navbar-nav .nav-link.about {
+      font-weight: 700;
+      color: #5c3928 !important;
+    }
+
+    .icon-buttons svg + svg {
+      margin-left: 40px;
+    }
+
+    @media (max-width: 992px) {
+      .navbar-custom {
+        height: auto;
+        padding: 20px 0;
+      }
+
+      body {
+        padding-top: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu + Icons -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Menu -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu" href="menucakelogin.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviewlogin.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link about" href="aboutlogin.html">About</a>
+          </li>
+        </ul>
+        <div class="icon-buttons d-flex align-items-center">
+          <a href="cartlogin.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <g fill="none" stroke="#000" stroke-width="1.5">
+              <path d="M3.864 16.455c-.858-3.432-1.287-5.147-.386-6.301S6.148 9 9.685 9h4.63c3.538 0 5.306 0 6.207 1.154s.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91Z" />
+              <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
+              <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v4m8-4v4m-4-4v4" />
+            </g>
+          </svg>
+        </a>
+          <!-- User Icon -->
+ <a href="login.html" class="btn btn-outline-dark ms-4 px-4 py-2 rounded">
+          Log in
+        </a>        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFFBE9;
+      color: #333;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+      filter: brightness(60%);
+    }
+
+    .section-heading-left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 4vw auto 1vw;
+      max-width: 90%;
+      gap: 1vw;
+    }
+
+    .line-left {
+      height: 0.6vw;
+      width: 15vw;
+      background-color: #5C3928;
+    }
+
+    .section-heading-left h2 {
+      font-size: 3vw;
+      font-family: 'Poppins', serif;
+      color: #000;
+    }
+
+    .about-container {
+      max-width: 90%;
+      margin: auto;
+      padding: 1vw;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 20px;
+      line-height: 1.8;
+      text-align: justify;
+      letter-spacing: 0.03vw;
+      width: 100%;
+      margin-bottom: 1vw;
+    }
+
+    .about-bottom {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2vw;
+      width: 100%;
+    }
+
+    .about-image {
+      flex: 0 0 45%;
+      max-width: 40%;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 1vw;
+      box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.1);
+    }
+
+    .about-extra-text-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1vw;
+    }
+
+    .about-extra-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .about-extra-desc {
+      font-size: 20px;
+      text-align: justify;
+      color: #444;
+      line-height: 1.8;
+      letter-spacing: 0.03vw;
+    }
+
+    .store-line-section {
+      position: relative;
+      width: 100%;
+      margin-top: 3vw;
+      height: 50px;
+    }
+
+    .store-line-section::before,
+    .store-line-section::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 25%;
+      height: 8px;
+      background-color: #5C3928;
+      border-radius: 4px;
+      transform: translateY(-50%);
+    }
+
+    .store-line-section::before {
+      left: 0;
+    }
+
+    .store-line-section::after {
+      right: 0;
+    }
+
+    .store-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: #5C392B;
+      font-weight: 800;
+      white-space: nowrap;
+      text-align: center;
+      background-color: #FFFBE9;
+      padding: 0 1vw;
+      z-index: 1;
+    }
+
+    .store-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 100%;
+      gap: 2vw;
+      margin-top: 2vw;
+    }
+
+    .store-info-text {
+      flex: 1;
+      font-size: 20px;
+      color: #333;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    .store-location,
+    .store-opening-time {
+      display: flex;
+      align-items: flex-start;
+      gap: 1vw;
+      margin-top: 1vw;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .opening-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.4;
+    }
+
+    .store-info-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-image {
+      width: 500px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1vw;
+      box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .map-image:hover {
+      transform: scale(1.02);
+    }
+
+    .store-footer-note {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 3vw;
+      margin-bottom: 4vw;
+    }
+
+    @media (max-width: 768px) {
+      .about-bottom,
+      .store-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+      }
+
+      .map-image {
+        width: 90%;
+        height: auto;
+      }
+
+      .section-heading-left h2 {
+        font-size: 5vw;
+      }
+
+      .about-extra-title {
+        font-size: 24px;
+        white-space: normal;
+      }
+
+      .about-extra-desc,
+      .about-text {
+        font-size: 18px;
+      }
+
+      .store-line-section {
+        height: auto;
+      }
+
+      .store-line-section::before,
+      .store-line-section::after {
+        width: 20%;
+      }
+
+      .store-text {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="toko-lavela.png" alt="Toko Lavela" class="hero-image" style="margin-top: 100px;"/>
+  </header>
+
+  <section>
+    <div class="section-heading-left">
+      <div class="line-left"></div>
+      <div class="title" style="font-weight: 800; font-size: 37px;" >ABOUT US</div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          Lavela started from a simple dream of a housewife who loved to bake cakes for her family and neighbors. In early 2021, in the midst of a challenging pandemic, a desire arose to turn a hobby into a more serious business opportunity. With a family recipe that has been passed down from generation to generation, the name "Lavela" is taken from a combination of words that mean warmth, love, and deliciousness—three things that we always want to present in every bite.
+        </p>
+      </div>
+
+      <div class="about-bottom">
+        <div class="about-image">
+          <img src="about bread.jpg" alt="Kue Lavela" />
+        </div>
+        <div class="about-extra-text-group">
+          <div class="about-extra-title">More Than Bread — It’s an Experience</div>
+          <div class="about-extra-desc">
+            We believe that every bite should leave a lasting impression. That’s why we use only premium ingredients and craft each loaf with heart and care. From the careful selection of materials to the final bake, our bread is made with love to deliver a warm, soft, and unforgettable taste.
+          </div>
+        </div>
+      </div>
+
+      <div class="store-line-section">
+        <div class="store-text" style="font-size: 25px;">VISIT OUR STORE</div>
+      </div>
+
+      <div class="store-info">
+        <div class="store-info-text">
+          If you’d love to experience the warmth of our fresh bread firsthand, feel free to visit us at our offline store:
+          <div class="store-location">
+            <img src="map 2.png" alt="Map Icon" class="icon" />
+            <span>Jl. Mawar No. 17, Jakarta Selatan.</span>
+          </div>
+          <div class="store-opening-time">
+            <img src="jam.png" alt="Waktu Icon" class="icon" />
+            <div class="opening-text-group">
+              <span>Opening Hours:</span>
+              <span>Monday – Sunday, 08:00 AM – 08:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-info-image">
+          <a href="https://maps.app.goo.gl/rYqnrYNQtiUijytS9" target="_blank">
+            <img src="peta.jpg" alt="Lokasi Toko Lavela" class="map-image" />
+          </a>
+        </div>
+      </div>
+
+      <div class="store-footer-note">
+        Drop by to enjoy our fresh baked goods every day!
+      </div>
+    </div>
+  </section>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    footer {
+      background-color: #ad8b73;
+      padding: 60px 30px;
+      font-size: 18px;
+      line-height: 1.8;
+      isolation: isolate;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .logo {
+      flex: 1 1 240px;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      width: 240px;
+      height: auto;
+      display: block;
+    }
+
+    .footer-sections {
+      display: flex;
+      flex: 3;
+      justify-content: space-between;
+      flex-wrap: nowrap; 
+      align-items: flex-start;
+      gap: 60px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section p {
+      color: white;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+
+    .footer-section p:first-of-type {
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: 4px;
+      background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      .logo img {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .footer-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .footer-section.follow {
+        text-align: center;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="logo">
+        <img src="logo rev.png" alt="Lavela Logo" />
+      </div>
+
+      <div class="footer-sections">
+
+        <div class="footer-section">
+          <p>About</p>
+          <p>About Us</p>
+          <p>Location</p>
+          <p>Contact Us</p>
+        </div>
+
+        <div class="footer-section">
+          <p>Support</p>
+          <p>Privacy Policy</p>
+          <p>Terms</p>
+        </div>
+
+        <div class="footer-section follow">
+          <p>Follow Us</p>
+          <div class="footer-icons">
+            <img src="fb2.png" alt="Facebook" class="social-icon" />
+            <img src="ig2.png" alt="Instagram" class="social-icon" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

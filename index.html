@@ -1,113 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <style>
-    body {
-      background-color: #ad8b73;
-      min-height: 100vh;
-    }
-    .card {
-      background-color: #fff;
-      border-radius: 20px;
-      padding: 4rem;
-    }
-    .social-icons img {
-      width: 30px;
-      margin: 0 8px;
-      cursor: pointer;
-    }
-    input::-ms-reveal,
-    input::-ms-clear,
-    input::-webkit-credentials-auto-fill-button,
-    input::-webkit-contacts-auto-fill-button {
-      display: none !important;
-    }
-    input[type="password"] {
-      -moz-appearance: none;
-    }
+  <title>Lavela Menu</title>
+  <link rel="stylesheet" href="style.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    .form-control {
-      font-size: 1.1rem;
-      height: 60px;
-      padding: 10px 15px;
-    }
-    .input-group-text {
-      height: 60px;
-    }
-  </style>
 </head>
-<body class="d-flex align-items-center justify-content-center">
+<body>
+    <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" />
+      </a>
 
-  <div class="card col-md-4 shadow">
-    <h3 class="text-center fw-bold mb-4">Log in</h3>
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <form>
-      <!-- Username -->
-      <div class="mb-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-          <rect width="24" height="24" fill="none" />
-          <circle cx="12" cy="6" r="4" fill="currentColor" />
-          <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5" />
-        </svg>
-        <label class="form-label fw-bold">Username</label>
-        <input type="text" class="form-control" placeholder="Enter your username here...">
-      </div>
+      <!-- Menu + Icons -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Menu -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link menu" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="menucakelogin.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviewlogin.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutlogin.html">About</a>
+          </li>
+        </ul>
 
-      <!-- Password -->
-      <div class="mb-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 32 32">
-          <rect width="32" height="32" fill="none" />
-          <path fill="currentColor" d="M21 2a8.998 8.998 0 0 0-8.612 11.612L2 24v6h6l10.388-10.388A9 9 0 1 0 21 2m0 16a7 7 0 0 1-2.032-.302l-1.147-.348l-.847.847l-3.181 3.181L12.414 20L11 21.414l1.379 1.379l-1.586 1.586L9.414 23L8 24.414l1.379 1.379L7.172 28H4v-3.172l9.802-9.802l.848-.847l-.348-1.147A7 7 0 1 1 21 18" />
-          <circle cx="22" cy="10" r="2" fill="currentColor" />
-        </svg>
-        <label class="form-label fw-bold">Password</label>
-        <div class="input-group">
-          <input type="password" class="form-control" id="password" placeholder="Enter your password here...">
-          <span class="input-group-text" onclick="togglePassword('password', this)" style="cursor:pointer;">
-            <i class="bi bi-eye-slash"></i>
-          </span>
+        <!-- Ikon Cart & Akun -->
+        <div class="icon-buttons d-flex align-items-center">
+        <div class="icon-buttons d-flex align-items-center">
+          <a href="cartlogin.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <g fill="none" stroke="#000" stroke-width="1.5">
+              <path d="M3.864 16.455c-.858-3.432-1.287-5.147-.386-6.301S6.148 9 9.685 9h4.63c3.538 0 5.306 0 6.207 1.154s.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91Z" />
+              <path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4" />
+              <path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v4m8-4v4m-4-4v4" />
+            </g>
+          </svg>
+        </a>
+          <!-- User Icon -->
+          <a href="login.html" class="btn btn-outline-dark ms-4 px-4 py-2 rounded">
+          Log in
+        </a>
         </div>
       </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-      <!-- Submit Button -->
-<a href="home.html" class="btn btn-dark w-100 mb-3">Log in</a>
+    <!-- Banner -->
+    <div class="Banner">
+  <div id="gambarCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="toko.jpg" class="d-block w-100" alt="Toko LAVELA">
+      </div>
+      <div class="carousel-item">
+        <img src="cake display.jpg" class="d-block w-100" alt="Display Kue">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-      <!-- Social Sign-in -->
-      <div class="text-center mb-2">Or sign in with</div>
-      <div class="d-flex justify-content-center social-icons mb-3">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" />
+    <!-- Navigasi panah -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#gambarCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#gambarCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+    <!-- Indikator bawah -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#gambarCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#gambarCarousel" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+</div>
+    <!-- Our Signature -->
+
+    <section class="signature">
+        <h2><strong>Our Signature</strong></h2>
+        <div class="signature-items">
+            <div class="item">
+                <img src="garden cake.jpg" alt="Garden Cake">
+                <p><strong>Garden Cake<br>Rp 329.000</strong></p>
+            </div>
+            <div class="item">
+                <img src="blueberry cheese.jpg" alt="Blueberry Cheesecake">
+                <p><strong>Blueberry Cheesecake<br>Rp 69.000</strong></p>
+            </div>
+            <div class="item">
+                <img src="cinnamont bread.jpg" alt="cinnamon Bread">
+                <p><strong>Cinnamon Bread<br>Rp 45.000</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Menu -->
+    <section class="menu">
+        <h2><strong>Our Menu</strong></h2>
+        <div class="menu-item">
+        <img src="cake.jpg" alt="Cake">
+        <a href="menucake.html" class="overlay" style="text-decoration: none;">CAKE</a>
+        </div>
+        <div class="menu-item">
+        <img src="cupcake.jpg" alt="Cupcake">
+        <a href="cupcake.html" class="overlay" style="text-decoration: none;">CUPCAKE</a>
+        </div>
+        <div class="menu-item">
+        <img src="slice cake.jpg" alt="Slice Cake">
+        <a href="slice cake.html" class="overlay" style="text-decoration: none;">SLICE CAKE</a>
+        </div>
+        <div class="menu-item">
+        <img src="bread.jpg" alt="Bread">
+        <a href="bread.html" class="overlay" style="text-decoration: none;">BREAD</a>
+        </div>
+    </section>
+ <footer>
+    <div class="footer-container">
+
+      <div class="logo2">
+        <img src="logo rev.png" alt="Lavela Logo" />
       </div>
 
-      <!-- Register link -->
-      <p class="text-center">Don't have an account? 
-        <a href="register.html" class="text-danger fw-bold">Register now</a>
-      </p>
-    </form>
-  </div>
+      <div class="footer-sections">
 
-  <script>
-    function togglePassword(fieldId, iconElement) {
-      const input = document.getElementById(fieldId);
-      const icon = iconElement.querySelector("i");
+        <div class="footer-section">
+          <p>About</p>
+          <p>About Us</p>
+          <p>Location</p>
+          <p>Contact Us</p>
+        </div>
 
-      if (input.type === "password") {
-        input.type = "text";
-        icon.classList.remove("bi-eye-slash");
-        icon.classList.add("bi-eye");
-      } else {
-        input.type = "password";
-        icon.classList.remove("bi-eye");
-        icon.classList.add("bi-eye-slash");
-      }
-    }
-  </script>
+        <div class="footer-section">
+          <p>Support</p>
+          <p>Privacy Policy</p>
+          <p>Terms</p>
+        </div>
 
+        <div class="footer-section follow">
+          <p>Follow Us</p>
+          <div class="footer-icons">
+            <img src="fb2.png" alt="Facebook" class="social-icon" />
+            <img src="ig2.png" alt="Instagram" class="social-icon" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
 </body>
 </html>
