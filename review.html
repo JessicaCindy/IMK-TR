@@ -4,30 +4,286 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-<style>
-    .nav-link {
-      color: white !important;  
-      transition: color 0.3s ease;
-    }
-
-    .nav-link:hover {
-      color: #5c3928 !important;  
-      text-decoration: none;
-      background-color: transparent !important; 
-    }
-
-  </style>
 
 </head>
+<style>
+     * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf4;
+      overflow-x: hidden;
+    }
+
+    body { padding-top: 180px; }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: #ad8b73;
+      height: 100px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      height: 100px;
+      object-fit: cover;
+      margin-top: 25px;
+      margin-left: 5px;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 20px;
+      font-weight: 400;
+      color: #ffffff !important;
+      margin: 0 25px;
+      margin-top: 65px;
+    }
+
+    .navbar-nav .nav-link.menu {
+      font-weight: 700;
+      color: #5c3928 !important;
+    }
+
+    .icon-buttons svg + svg {
+      margin-left: 40px;
+    }
+    /* Review Section */
+    .review-section {
+      margin: 0 auto;
+      background-color: #FFFBE9;
+      padding: 20px;
+    }
+    .review-summary {
+      max-width: 1343px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      align-self: center;
+      flex-wrap: wrap;
+      background-color: #fffbe8;
+      border-radius: 10px;
+      padding: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .border1 {
+      padding-right: 40px;
+      padding-top: 10px;
+      border-right: 2px solid #ccc;
+      align-content: center;
+      height: 200px;
+    }
+    .average {
+      padding-right: 40px;
+      padding-top: 10px;
+      align-content: center;
+    }
+    .big-number {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .stars {
+      color: gold;
+    }
+    .rating-bars {
+      padding-left: 40px;
+      border-left: 2px solid #ccc;
+    }
+    .bar {
+      display: inline-block;
+      border-radius: 100px;
+      margin-left: 10px;
+      height: 20px;
+    }
+    .five { width: 250px; background-color: gold; }
+    .four { width: 200px; background-color: #f5c542; }
+    .three { width: 100px; background-color: #e6b800; }
+    .two { width: 50px; background-color: #c2a000; }
+    .one { width: 30px; background-color: #aa8500; }
+
+    .user-review, .other-reviews {
+      background-color: #fffbe8;
+      margin-top: 30px;
+      padding: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .star-input {
+      font-size: 40px;
+      color: #ccc;
+    }
+  textarea {
+  width: 100%;
+  height: 40px;
+  font-size: 1vw;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #FFFBE9;
+  border: #FFFBE9;
+  color: black;
+}
+
+    .review-card {
+      background-color: #FFFBE9;
+      border-bottom: 2px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    .review-card img {
+       width: 181px;
+  height: 181px;
+  border-radius: 10px;
+  float: right;
+    }
+    .isi {
+      flex: 1;
+    }
+    .rating {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .info .name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .info .time {
+      font-size: 14px;
+      color: gray;
+      margin-bottom: 10px;
+    }
+    .text {
+      font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ad8b73;
+      padding: 60px 30px;
+      color: white;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      flex: 1;
+    }
+    .footer-section p:first-of-type {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .footer-icons img {
+      width: 36px;
+      height: 36px;
+    }
+    .user-review img {
+  width: 181px;
+  height: 181px;
+  border-radius: 10px;
+  float: right;
+}
+
+
+    .footer-sections {
+      display: flex;
+      flex: 3;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      gap: 60px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section p {
+      color: white;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+
+    .footer-section p:first-of-type {
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: 4px;
+      background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      .logo img {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .footer-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .footer-section.follow {
+        text-align: center;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+</style>
 <body>
     <!--navbar-->
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow-sm">
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand" href="#">
-        <img src="assets/logo.png" alt="Logo" />
+        <img src="logo.png" alt="Logo" />
       </a>
 
       <!-- Mobile toggle -->
@@ -43,7 +299,7 @@
             <a class="nav-link" href="home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menucake.html">Menu</a>
+            <a class="nav-link active" href="menucake.html">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link menu" href="review.html">Review</a>
@@ -81,7 +337,7 @@
               <h3><strong>Total Review</strong></h3>
                 <p class="big-number">30</p>
             </div>
-            <div>
+            <div class="average">
                 <h3><strong>Average Review</strong></h3>
                 <p class="big-number">4.9 <span class="stars">★★★★★</span></p>
             </div>
@@ -95,7 +351,7 @@
             </div>
             <div class="user-review">
             <h4><strong>Your Review</strong></h4>
-            <img src="assets/garlic bread.jpg" alt="Your Dish">
+            <img src="garlic bread.jpg" alt="Your Dish">
             <div class="star-input">☆ ☆ ☆ ☆ ☆</div> 
             <textarea placeholder="Enter your review here..."></textarea>
             </div>
@@ -113,7 +369,7 @@
                 <p class="text">Rasanya enak bangettt, isian-nya juga banyak 10/10 dehh</p>
                 </div>
                 </div>
-                <img src="assets/garlic bread.jpg" alt="Food">
+                <img src="garlic bread.jpg" alt="Food">
             </div>
 
             <!-- Review 2 -->
@@ -126,7 +382,7 @@
                 <p class="text">Tiramisu-nya kerasa bangettt, enak pokoknya di lidah maniss banget</p>
                 </div>
               </div>
-                <img src="assets/tiramisu cake.jpg" alt="Food">
+                <img src="tiramisu cake.jpg" alt="Food">
             </div>
 
             <!-- Review 3 -->
@@ -139,14 +395,14 @@
                 <p class="text">Cake nya lucu, rasanya juga oke banget, harga terjangkau</p>
                 </div>
                 </div>
-                <img src="assets/redevelvet.jpg" alt="Food">
+                <img src="redevelvet.jpg" alt="Food">
             </div>
   </section>
-   <footer>
+  <footer>
     <div class="footer-container">
 
-      <div class="logo2">
-        <img src="assets/logo rev.png" alt="Lavela Logo" />
+      <div class="logo">
+        <img src="logo rev.png" alt="Lavela Logo" />
       </div>
 
       <div class="footer-sections">
@@ -167,8 +423,8 @@
         <div class="footer-section follow">
           <p>Follow Us</p>
           <div class="footer-icons">
-            <img src="assets/fb2.png" alt="Facebook" class="social-icon" />
-            <img src="assets/ig2.png" alt="Instagram" class="social-icon" />
+            <img src="fb2.png" alt="Facebook" class="social-icon" />
+            <img src="ig2.png" alt="Instagram" class="social-icon" />
           </div>
         </div>
 
